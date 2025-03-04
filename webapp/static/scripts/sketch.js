@@ -102,6 +102,13 @@ const drawPie = (top3) => {
     probs.push(others);
     labels.push(`Others (${others})`);
 
+    result = document.getElementById("result");
+
+    // result.innerHTML = `<ul>${LABELS.map(label => `<li>${label}</li>`).join('')}</ul>`
+
+    result.innerHTML = LABELS.map(label => `${label} `).join(', ')
+
+
     if (pieChart) pieChart.destroy();
 
     const ctx = document.getElementById("predictions").getContext("2d");
